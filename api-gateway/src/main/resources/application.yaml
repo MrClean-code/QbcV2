@@ -15,6 +15,12 @@ spring:
         uri: lb://customer
         predicates[0]: Path=/user
         predicates[1]: Method=GET
+      routes[1]:
+        id: order
+        uri: lb://order
+        predicates[0]: Path=/order
+        predicates[1]: Method=Post
+
 
 eureka:
   client:
