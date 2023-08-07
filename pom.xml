@@ -13,6 +13,8 @@
         <module>e-server</module>
         <module>customer</module>
         <module>api-gateway</module>
+        <module>config</module>
+        <module>order</module>
     </modules>
 
     <properties>

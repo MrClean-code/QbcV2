@@ -14,6 +14,8 @@
     <properties>
         <java.version>11</java.version>
         <spring-cloud-starter-netflix-eureka-client.version>3.1.3</spring-cloud-starter-netflix-eureka-client.version>
+        <spring-cloud-starter-config.version>3.1.8</spring-cloud-starter-config.version>
+        <spring-cloud-sleuth-zipkin.version>3.1.5</spring-cloud-sleuth-zipkin.version>
     </properties>
     <dependencies>
         <dependency>
@@ -28,6 +30,16 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+            <version>${spring-cloud-starter-config.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-sleuth-zipkin</artifactId>
+            <version>${spring-cloud-sleuth-zipkin.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
