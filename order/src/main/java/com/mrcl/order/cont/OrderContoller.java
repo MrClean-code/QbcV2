@@ -26,8 +26,14 @@ public class OrderContoller {
                 HttpStatus.CREATED);
     }
 
-
     @GetMapping("")
+    public ResponseEntity<List<Order>> getOrders() {
+        return new ResponseEntity<>(orderService.findAll(),
+                HttpStatus.OK);
+    }
+
+
+    @GetMapping("/twoParam")
     public ResponseEntity<List<Order>> findOrderByPrice(@RequestParam Double minWeight,
                                                         @RequestParam Double maxWeight) {
         return new ResponseEntity<>(orderService.getOrderByWeight(minWeight, maxWeight),

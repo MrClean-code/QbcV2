@@ -18,6 +18,7 @@
         <spring-cloud-starter-netflix-eureka-client.version>3.1.3</spring-cloud-starter-netflix-eureka-client.version>
         <spring-cloud-starter-config.version>3.1.8</spring-cloud-starter-config.version>
         <spring-cloud-sleuth-zipkin.version>3.1.5</spring-cloud-sleuth-zipkin.version>
+        <spring-web.v>6.0.11</spring-web.v>
     </properties>
 
     <dependencies>
@@ -47,6 +48,15 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
             <version>${spring-cloud-starter-netflix-eureka-client.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring-web.v}</version>
         </dependency>
     </dependencies>
 </project>

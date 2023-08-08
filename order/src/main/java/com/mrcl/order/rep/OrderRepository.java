@@ -15,4 +15,5 @@ public interface OrderRepository extends MongoRepository<Order, UUID> {
 
     @Query(value = " { 'weight' : { $gt: ?0, $lt: ?1}}")
     List<Order> findByWeightBetween(Double min, Double max);
+
 }

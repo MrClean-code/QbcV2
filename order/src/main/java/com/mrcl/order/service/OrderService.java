@@ -9,6 +9,8 @@ import java.util.List;
 public interface OrderService {
     Order save(Order order);
 
+    List<Order> findAll();
+
     List<Order> getOrderByPrice(Double price);
 
     List<Order> getOrderByWeight(Double minWeight, Double maxWeight);

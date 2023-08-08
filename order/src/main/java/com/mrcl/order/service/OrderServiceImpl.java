@@ -63,4 +63,9 @@ public class OrderServiceImpl implements OrderService {
                 () -> mongoTemplate.count(query.skip(0).limit(0), Order.class));
         return order;
     }
+
+    @Override
+    public List<Order> findAll() {
+        return orderRepository.findAll();
+    }
 }
