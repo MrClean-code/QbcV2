@@ -3,17 +3,16 @@ package com.mrcl.cont;
 import com.mrcl.service.CustomerService;
 import com.mrcl.model.Customer;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Slf4j
+
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("user")
+@RequestMapping("/customer")
 public class CustomerController {
 
     private final CustomerService customerService;
@@ -29,5 +28,6 @@ public class CustomerController {
         return new ResponseEntity<>(customerService.findAll(),
                 HttpStatus.OK);
     }
+
 
 }

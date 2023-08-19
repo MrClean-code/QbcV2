@@ -1,1 +1,9 @@
+com\mrcl\order\cont\OrderContoller.class
+com\mrcl\order\collection\Order.class
+com\mrcl\order\service\OrderServiceImpl.class
+com\mrcl\order\rep\OrderRepository.class
+com\mrcl\order\collection\Address$AddressBuilder.class
+com\mrcl\order\collection\Order$OrderBuilder.class
+com\mrcl\order\service\OrderService.class
 com\mrcl\order\OrderApplication.class
+com\mrcl\order\collection\Address.class

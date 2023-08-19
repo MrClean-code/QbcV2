@@ -1,6 +1,7 @@
 package com.mrcl.service;
 
 import com.mrcl.model.Customer;
+import com.mrcl.order.OrderApi;
 import com.mrcl.rep.CustomerRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ import java.util.List;
 public class CustomerServiceImpl implements CustomerService {
 
     private final CustomerRepository customerRepository;
-
+    private final OrderApi orderApi;
 
     @Transactional
     public Customer saveCustomer(Customer customer) {
@@ -23,6 +24,10 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Transactional
     public List<Customer> findAll() {
-        return customerRepository.findAll();
+        List<Customer> customerList = customerRepository.findAll();
+        customerList.forEach( c -> {
+            c.setOrderList(orderApi.findOrderByPrice(1.0, 3000.0));
+        });
+        return customerList;
     }
 }

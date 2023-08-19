@@ -54,6 +54,4 @@ public class OrderContoller {
         return orderService.search(price, minWeight, maxWeight,
                 city, pageable);
     }
-
-
 }
