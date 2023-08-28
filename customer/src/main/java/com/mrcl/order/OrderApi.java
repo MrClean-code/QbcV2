@@ -7,13 +7,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-@FeignClient(value = "ORDER-SERVICE")
+@FeignClient(value = "order", url = "http://localhost:8081")
 public interface OrderApi {
-
-//    @GetMapping(value = "/api/departments/{id}")
-//    Order getDepartmentById(@PathVariable("id") Long departmentId);
-
     @GetMapping("/order/twoParam")
-    List<Order> findOrderByPrice(@RequestParam Double minWeight,
-                                 @RequestParam Double maxWeight);
+    List<Order> findOrderByPrice(@RequestParam("minWeight") Double minWeight,
+                                 @RequestParam("maxWeight") Double maxWeight);
 }

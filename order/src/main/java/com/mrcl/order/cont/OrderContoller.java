@@ -34,8 +34,8 @@ public class OrderContoller {
 
 
     @GetMapping("/twoParam")
-    public ResponseEntity<List<Order>> findOrderByPrice(@RequestParam Double minWeight,
-                                                        @RequestParam Double maxWeight) {
+    public ResponseEntity<List<Order>> findOrderByPrice(@RequestParam("minWeight") Double minWeight,
+                                                        @RequestParam("maxWeight") Double maxWeight) {
         return new ResponseEntity<>(orderService.getOrderByWeight(minWeight, maxWeight),
                 HttpStatus.OK);
     }

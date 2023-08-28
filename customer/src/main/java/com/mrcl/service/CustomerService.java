@@ -1,10 +1,8 @@
 package com.mrcl.service;
 
+import com.mrcl.dto.CustomerDto;
 import com.mrcl.model.Customer;
-import com.mrcl.rep.CustomerRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -13,5 +11,5 @@ public interface CustomerService {
 
     Customer saveCustomer(Customer customer);
 
-    List<Customer> findAll();
+    List<CustomerDto> findAll();
 }

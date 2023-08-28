@@ -1,5 +1,6 @@
 package com.mrcl.cont;
 
+import com.mrcl.dto.CustomerDto;
 import com.mrcl.service.CustomerService;
 import com.mrcl.model.Customer;
 import lombok.RequiredArgsConstructor;
@@ -24,7 +25,7 @@ public class CustomerController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Customer>> getCustomers() {
+    public ResponseEntity<List<CustomerDto>> getCustomers() {
         return new ResponseEntity<>(customerService.findAll(),
                 HttpStatus.OK);
     }
